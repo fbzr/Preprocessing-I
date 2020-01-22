@@ -139,8 +139,18 @@ body {
 html {
   font-size: 62.5%;
 }
+/* Set font-sizes */
 body {
   font-size: 1.6rem;
+}
+h1 {
+  font-size: 6rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.5rem;
 }
 /* Mixins */
 .centerItems {
@@ -174,6 +184,32 @@ nav a {
 /* Header */
 header {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section {
+  padding: 4% 0;
+}
+/* About */
+#about {
+  padding: 4% 0;
+}
+/* Skills */
+#skills {
+  padding: 4% 0;
+}
+/* Experience */
+#experience {
+  padding: 4% 0;
+}
+/* Contact */
+#contact {
+  padding: 4% 0;
+}
+/* Footer */
+footer {
+  padding: 4% 0;
   display: flex;
   justify-content: center;
   align-items: center;
