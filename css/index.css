@@ -214,6 +214,12 @@ p {
   width: 25%;
   padding: 2% 0;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 150ms;
+}
+.container nav a:hover {
+  background-color: #999999b0;
 }
 .container header {
   height: 100vh;
