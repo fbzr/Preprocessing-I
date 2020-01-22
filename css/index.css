@@ -1,1 +1,370 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* Variables */
+/* Set default font-size */
+html {
+  font-size: 62.5%;
+}
+/* Body */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  line-height: 130%;
+  color: #1a1a1a;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://images.unsplash.com/photo-1483354483454-4cd359948304?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* Set fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+}
+h1 {
+  font-size: 6rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.5rem;
+}
+/* Add margin top/bottom to p */
+p {
+  margin: 2% 0;
+}
+/* Mixins */
+/* Container */
+.container {
+  position: relative;
+  margin: 0 10%;
+  /* Navbar */
+  /* Header */
+  /* Sections */
+  /* About */
+  /* Skills */
+  /* Experience */
+  /* Contact */
+  /* Footer */
+}
+@media (max-width: 800px) {
+  .container {
+    margin: 0 8%;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    margin: 0 4%;
+  }
+}
+.container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .container nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container nav a {
+  width: 25%;
+  padding: 2% 0;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 150ms;
+}
+.container nav a:hover {
+  background-color: #999999b0;
+}
+.container header {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.container header h1 {
+  letter-spacing: 8px;
+  padding: 20px 0;
+}
+.container .section {
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+.container .section h2 {
+  margin-bottom: 8%;
+}
+.container #about {
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+.container #about h2 {
+  margin-bottom: 8%;
+}
+.container #about .profileImg {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: auto;
+}
+@media (max-width: 800px) {
+  .container #about .profileImg {
+    width: 200px;
+    height: 200px;
+  }
+}
+.container #about .aboutContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .container #about .aboutContainer {
+    flex-wrap: wrap;
+  }
+}
+.container #about .aboutContainer .aboutText {
+  width: 65%;
+  padding: 4%;
+}
+@media (max-width: 800px) {
+  .container #about .aboutContainer .aboutText {
+    width: 60%;
+  }
+}
+@media (max-width: 500px) {
+  .container #about .aboutContainer .aboutText {
+    width: 100%;
+  }
+}
+.container #skills {
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+.container #skills h2 {
+  margin-bottom: 8%;
+}
+.container #skills li {
+  list-style-type: square;
+  list-style-position: inside;
+}
+.container #experience {
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+.container #experience h2 {
+  margin-bottom: 8%;
+}
+.container #experience .experienceTable {
+  width: 80%;
+  margin: auto;
+  border: 1px solid #999;
+}
+@media (max-width: 500px) {
+  .container #experience .experienceTable {
+    width: 95%;
+  }
+}
+.container #experience .experienceTable .titleRow {
+  background-color: #8d98b188;
+}
+.container #experience .experienceTable .experienceRow {
+  display: flex;
+  border: 1px solid #999;
+}
+.container #experience .experienceTable .experienceRow .years {
+  padding: 2% 1%;
+  width: 25%;
+}
+.container #experience .experienceTable .experienceRow .company {
+  padding: 2% 1%;
+  width: 35%;
+}
+.container #experience .experienceTable .experienceRow .position {
+  padding: 2% 1%;
+  width: 40%;
+}
+.container #contact {
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+.container #contact h2 {
+  margin-bottom: 8%;
+}
+.container #contact .contactIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container #contact .contactIcons a {
+  color: #1a1a1a;
+  padding: 15px;
+}
+.container footer {
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4%;
+}
+.container footer h2 {
+  margin-bottom: 8%;
+}
