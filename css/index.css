@@ -155,11 +155,26 @@ body {
 }
 /* Container */
 .container {
+  position: relative;
   margin: 0 10%;
 }
 /* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+nav a {
+  width: 25%;
+  padding: 2% 0;
+  text-align: center;
+}
+/* Header */
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }

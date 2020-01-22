@@ -85,10 +85,25 @@ body {
 
 /* Container */
 .container {
+	position: relative;
 	margin: 0 10%;
 }
 
 /* Navbar */
 nav {
 	.spaceBetweenItems();
+	position: absolute;
+	width: 100%;
+
+	a {
+		width: 25%;
+		padding: 2% 0;
+		text-align: center;
+	}
+}
+
+/* Header */
+header {
+	height: 100vh;
+	.centerItems();
 }
