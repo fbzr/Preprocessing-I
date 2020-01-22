@@ -134,3 +134,32 @@ html,
 body {
   height: 100%;
 }
+/* Variables */
+/* Set default font-size */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+/* Mixins */
+.centerItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spaceBetweenItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Container */
+.container {
+  margin: 0 10%;
+}
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
