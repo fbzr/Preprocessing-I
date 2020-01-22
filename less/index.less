@@ -64,6 +64,9 @@ html, body {
 @main-font: 'Montserrat', sans-serif;
 // Colors
 @font-color: #1a1a1a;
+// Media Query sizes
+@mobile: 500px;
+@tablet: 800px;
 
 /* Set default font-size */
 html {
@@ -122,6 +125,11 @@ p {
 	align-items: center;
 }
 
+.flexColumn() {
+	display: flex;
+	flex-direction: column;
+}
+
 /* Container */
 .container {
 	position: relative;
@@ -131,146 +139,165 @@ p {
 		margin: 0 8%;
 	}
 
-	@media (max-width: 500px) {
+	@media (max-width: @mobile) {
 		margin: 0 4%;
 	}
-}
 
-/* Navbar */
-nav {
-	.spaceBetweenItems();
-	position: absolute;
-	width: 100%;
-
-	a {
-		width: 25%;
-		padding: 2% 0;
-		text-align: center;
-	}
-}
-
-/* Header */
-header {
-	height: 100vh;
-	.centerItems();
-
-	h1 {
-		letter-spacing: 8px;
-	}
-}
-
-/* Sections */
-.section {
-	padding: @section-padding;
-	border-radius: 15px;
-	margin-bottom: 8%;
-	background-image: linear-gradient(
-		rgba(255,255,255,0.7),
-		rgba(255,255,255,0.7)
-	);
-
-	h2 {
-		margin-bottom: 2%;
-	}
-}
-
-/* About */
-#about {
-	.section();
-	
-	.profileImg {
-		width: 220px;
-		height: 220px;
-		border-radius: 50%;
-		margin: auto; // Center profile image in the div
-
-		@media (max-width: 800px) {
-			width: 200px;
-			height: 200px;
-		}
-	}
-
-	.aboutContainer {
+	/* Navbar */
+	nav {
 		.spaceBetweenItems();
+		position: absolute;
+		width: 100%;
 
-		.aboutText {
-			width: 65%;
-
-			@media (max-width: 800px) {
-				width: 60%;
-			}
+		@media (max-width: @mobile) {
+			.flexColumn();
 		}
-
-	}
-}
-
-/* Skills */
-#skills {
-	.section();
-	
-	li {
-		list-style-type: square;
-		list-style-position: inside;
-	}
-}
-
-/* Experience */
-#experience {
-	.section();
-
-	@borderTableColor: #999;
-	
-	.experienceTable {
-		width: 80%;
-		margin: auto;
-		border: 1px solid @borderTableColor;
-
-		.titleRow {
-			background-color: #8d98b188;
-		}
-
-		.experienceRow {
-			display: flex;
-			border: 1px solid @borderTableColor;
-			.experienceColumn() {
-				padding: 2% 1%;
-			}
-
-			.years {
-				.experienceColumn();
-				width: 20%;
-			}
-
-			.company {
-				.experienceColumn();
-				width: 30%;
-			}
-
-			.position {
-				.experienceColumn();
-				width: 50%;
-			}
-		}
-	}
-}
-
-/* Contact */
-#contact {
-	.section();
-	
-	.contactIcons {
-		.centerItems();
 
 		a {
-			color: @font-color;
-			padding: 15px;
+			width: 25%;
+			padding: 2% 0;
+			text-align: center;
 		}
+	}
+
+	/* Header */
+	header {
+		height: 100vh;
+		.centerItems();
+		.flexColumn();
+
+		h1 {
+			letter-spacing: 8px;
+			padding: 20px 0;
+		}
+	}
+
+	/* Sections */
+	.section {
+		padding: @section-padding;
+		border-radius: 15px;
+		margin-bottom: 8%;
+		background-image: linear-gradient(
+			rgba(255,255,255,0.7),
+			rgba(255,255,255,0.7)
+		);
+
+		h2 {
+			margin-bottom: 8%;
+		}
+	}
+
+	/* About */
+	#about {
+		.section();
+		
+		.profileImg {
+			width: 220px;
+			height: 220px;
+			border-radius: 50%;
+			margin: auto; // Center profile image in the div
+
+			@media (max-width: 800px) {
+				width: 200px;
+				height: 200px;
+			}
+		}
+
+		.aboutContainer {
+			.spaceBetweenItems();
+			
+			@media (max-width: @mobile) {
+				flex-wrap: wrap;
+			}
+
+			.aboutText {
+				width: 65%;
+				padding: 4%;
+
+				@media (max-width: 800px) {
+					width: 60%;
+				}
+				
+				@media (max-width: @mobile) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	/* Skills */
+	#skills {
+		.section();
+		
+		li {
+			list-style-type: square;
+			list-style-position: inside;
+		}
+	}
+
+	/* Experience */
+	#experience {
+		.section();
+
+		@borderTableColor: #999;
+		
+		.experienceTable {
+			width: 80%;
+			margin: auto;
+			border: 1px solid @borderTableColor;
+
+			@media (max-width: @mobile) {
+				width: 95%;
+			}
+
+			.titleRow {
+				background-color: #8d98b188;
+			}
+
+			.experienceRow {
+				display: flex;
+				border: 1px solid @borderTableColor;
+				.experienceColumn() {
+					padding: 2% 1%;
+				}
+
+				.years {
+					.experienceColumn();
+					width: 25%;
+				}
+
+				.company {
+					.experienceColumn();
+					width: 35%;
+				}
+
+				.position {
+					.experienceColumn();
+					width: 40%;
+				}
+			}
+		}
+	}
+
+	/* Contact */
+	#contact {
+		.section();
+		
+		.contactIcons {
+			.centerItems();
+
+			a {
+				color: @font-color;
+				padding: 15px;
+			}
+		}
+	}
+
+	/* Footer */
+	footer {
+		.section();
+		.centerItems();
+		margin-bottom: 4%;
 	}
 }
 
-/* Footer */
-footer {
-	.section();
-	.centerItems();
-	margin-bottom: 4%;
-}

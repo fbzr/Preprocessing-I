@@ -178,6 +178,14 @@ p {
 .container {
   position: relative;
   margin: 0 10%;
+  /* Navbar */
+  /* Header */
+  /* Sections */
+  /* About */
+  /* Skills */
+  /* Experience */
+  /* Contact */
+  /* Footer */
 }
 @media (max-width: 800px) {
   .container {
@@ -189,143 +197,159 @@ p {
     margin: 0 4%;
   }
 }
-/* Navbar */
-nav {
+.container nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
   width: 100%;
 }
-nav a {
+@media (max-width: 500px) {
+  .container nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container nav a {
   width: 25%;
   padding: 2% 0;
   text-align: center;
 }
-/* Header */
-header {
+.container header {
   height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
-header h1 {
+.container header h1 {
   letter-spacing: 8px;
+  padding: 20px 0;
 }
-/* Sections */
-.section {
+.container .section {
   padding: 4%;
   border-radius: 15px;
   margin-bottom: 8%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-.section h2 {
-  margin-bottom: 2%;
+.container .section h2 {
+  margin-bottom: 8%;
 }
-/* About */
-#about {
+.container #about {
   padding: 4%;
   border-radius: 15px;
   margin-bottom: 8%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-#about h2 {
-  margin-bottom: 2%;
+.container #about h2 {
+  margin-bottom: 8%;
 }
-#about .profileImg {
+.container #about .profileImg {
   width: 220px;
   height: 220px;
   border-radius: 50%;
   margin: auto;
 }
 @media (max-width: 800px) {
-  #about .profileImg {
+  .container #about .profileImg {
     width: 200px;
     height: 200px;
   }
 }
-#about .aboutContainer {
+.container #about .aboutContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#about .aboutContainer .aboutText {
+@media (max-width: 500px) {
+  .container #about .aboutContainer {
+    flex-wrap: wrap;
+  }
+}
+.container #about .aboutContainer .aboutText {
   width: 65%;
+  padding: 4%;
 }
 @media (max-width: 800px) {
-  #about .aboutContainer .aboutText {
+  .container #about .aboutContainer .aboutText {
     width: 60%;
   }
 }
-/* Skills */
-#skills {
+@media (max-width: 500px) {
+  .container #about .aboutContainer .aboutText {
+    width: 100%;
+  }
+}
+.container #skills {
   padding: 4%;
   border-radius: 15px;
   margin-bottom: 8%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-#skills h2 {
-  margin-bottom: 2%;
+.container #skills h2 {
+  margin-bottom: 8%;
 }
-#skills li {
+.container #skills li {
   list-style-type: square;
   list-style-position: inside;
 }
-/* Experience */
-#experience {
+.container #experience {
   padding: 4%;
   border-radius: 15px;
   margin-bottom: 8%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-#experience h2 {
-  margin-bottom: 2%;
+.container #experience h2 {
+  margin-bottom: 8%;
 }
-#experience .experienceTable {
+.container #experience .experienceTable {
   width: 80%;
   margin: auto;
   border: 1px solid #999;
 }
-#experience .experienceTable .titleRow {
+@media (max-width: 500px) {
+  .container #experience .experienceTable {
+    width: 95%;
+  }
+}
+.container #experience .experienceTable .titleRow {
   background-color: #8d98b188;
 }
-#experience .experienceTable .experienceRow {
+.container #experience .experienceTable .experienceRow {
   display: flex;
   border: 1px solid #999;
 }
-#experience .experienceTable .experienceRow .years {
+.container #experience .experienceTable .experienceRow .years {
   padding: 2% 1%;
-  width: 20%;
+  width: 25%;
 }
-#experience .experienceTable .experienceRow .company {
+.container #experience .experienceTable .experienceRow .company {
   padding: 2% 1%;
-  width: 30%;
+  width: 35%;
 }
-#experience .experienceTable .experienceRow .position {
+.container #experience .experienceTable .experienceRow .position {
   padding: 2% 1%;
-  width: 50%;
+  width: 40%;
 }
-/* Contact */
-#contact {
+.container #contact {
   padding: 4%;
   border-radius: 15px;
   margin-bottom: 8%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-#contact h2 {
-  margin-bottom: 2%;
+.container #contact h2 {
+  margin-bottom: 8%;
 }
-#contact .contactIcons {
+.container #contact .contactIcons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#contact .contactIcons a {
+.container #contact .contactIcons a {
   color: #1a1a1a;
   padding: 15px;
 }
-/* Footer */
-footer {
+.container footer {
   padding: 4%;
   border-radius: 15px;
   margin-bottom: 8%;
@@ -335,6 +359,6 @@ footer {
   align-items: center;
   margin-bottom: 4%;
 }
-footer h2 {
-  margin-bottom: 2%;
+.container footer h2 {
+  margin-bottom: 8%;
 }
