@@ -139,9 +139,26 @@ body {
 html {
   font-size: 62.5%;
 }
-/* Set font-sizes */
+/* Body */
 body {
-  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  line-height: 130%;
+  color: #1a1a1a;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://images.unsplash.com/photo-1483354483454-4cd359948304?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* Set fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
 }
 h1 {
   font-size: 6rem;
@@ -152,21 +169,25 @@ h2 {
 h3 {
   font-size: 3.5rem;
 }
+/* Add margin top/bottom to p */
+p {
+  margin: 2% 0;
+}
 /* Mixins */
-.centerItems {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.spaceBetweenItems {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 /* Container */
 .container {
   position: relative;
   margin: 0 10%;
+}
+@media (max-width: 800px) {
+  .container {
+    margin: 0 8%;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    margin: 0 4%;
+  }
 }
 /* Navbar */
 nav {
@@ -188,29 +209,132 @@ header {
   justify-content: center;
   align-items: center;
 }
+header h1 {
+  letter-spacing: 8px;
+}
+/* Sections */
 .section {
-  padding: 4% 0;
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+.section h2 {
+  margin-bottom: 2%;
 }
 /* About */
 #about {
-  padding: 4% 0;
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+#about h2 {
+  margin-bottom: 2%;
+}
+#about .profileImg {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: auto;
+}
+@media (max-width: 800px) {
+  #about .profileImg {
+    width: 200px;
+    height: 200px;
+  }
+}
+#about .aboutContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#about .aboutContainer .aboutText {
+  width: 65%;
+}
+@media (max-width: 800px) {
+  #about .aboutContainer .aboutText {
+    width: 60%;
+  }
 }
 /* Skills */
 #skills {
-  padding: 4% 0;
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+#skills h2 {
+  margin-bottom: 2%;
+}
+#skills li {
+  list-style-type: square;
+  list-style-position: inside;
 }
 /* Experience */
 #experience {
-  padding: 4% 0;
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+#experience h2 {
+  margin-bottom: 2%;
+}
+#experience .experienceTable {
+  width: 80%;
+  margin: auto;
+  border: 1px solid #999;
+}
+#experience .experienceTable .titleRow {
+  background-color: #8d98b188;
+}
+#experience .experienceTable .experienceRow {
+  display: flex;
+  border: 1px solid #999;
+}
+#experience .experienceTable .experienceRow .years {
+  padding: 2% 1%;
+  width: 20%;
+}
+#experience .experienceTable .experienceRow .company {
+  padding: 2% 1%;
+  width: 30%;
+}
+#experience .experienceTable .experienceRow .position {
+  padding: 2% 1%;
+  width: 50%;
 }
 /* Contact */
 #contact {
-  padding: 4% 0;
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-/* Footer */
-footer {
-  padding: 4% 0;
+#contact h2 {
+  margin-bottom: 2%;
+}
+#contact .contactIcons {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#contact .contactIcons a {
+  color: #1a1a1a;
+  padding: 15px;
+}
+/* Footer */
+footer {
+  padding: 4%;
+  border-radius: 15px;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4%;
+}
+footer h2 {
+  margin-bottom: 2%;
 }

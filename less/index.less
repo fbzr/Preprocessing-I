@@ -58,16 +58,38 @@ html, body {
 }
 
 /* Variables */
-@section-padding: 4% 0;
+@section-padding: 4%;
+// Font-family
+@header-font: 'Dosis', sans-serif;
+@main-font: 'Montserrat', sans-serif;
+// Colors
+@font-color: #1a1a1a;
 
 /* Set default font-size */
 html {
 	font-size: 62.5%;
 }
 
-/* Set font-sizes */
+/* Body */
 body {
-	font-size: 1.6rem;
+	font-family: @main-font;
+	font-size: 1.7rem;
+	line-height: 130%;
+	color: @font-color;
+	background-image: linear-gradient(
+			rgba(0,0,0,0.1),
+			rgba(0,0,0,0.1)
+		),
+		url('https://images.unsplash.com/photo-1483354483454-4cd359948304?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+/* Set fonts */
+h1, h2, h3, h4, h5, h6 {
+	font-family: @header-font;
+	text-align: center;
 }
 
 h1 {
@@ -82,15 +104,19 @@ h3 {
 	font-size: 3.5rem;
 }
 
-/* Mixins */
+/* Add margin top/bottom to p */
+p {
+	margin: 2% 0;
+}
 
-.centerItems {
+/* Mixins */
+.centerItems() {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.spaceBetweenItems {
+.spaceBetweenItems() {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -100,6 +126,14 @@ h3 {
 .container {
 	position: relative;
 	margin: 0 10%;
+
+	@media (max-width: 800px) {
+		margin: 0 8%;
+	}
+
+	@media (max-width: 500px) {
+		margin: 0 4%;
+	}
 }
 
 /* Navbar */
@@ -119,34 +153,124 @@ nav {
 header {
 	height: 100vh;
 	.centerItems();
+
+	h1 {
+		letter-spacing: 8px;
+	}
 }
 
+/* Sections */
 .section {
 	padding: @section-padding;
+	border-radius: 15px;
+	margin-bottom: 8%;
+	background-image: linear-gradient(
+		rgba(255,255,255,0.7),
+		rgba(255,255,255,0.7)
+	);
+
+	h2 {
+		margin-bottom: 2%;
+	}
 }
 
 /* About */
 #about {
 	.section();
+	
+	.profileImg {
+		width: 220px;
+		height: 220px;
+		border-radius: 50%;
+		margin: auto; // Center profile image in the div
+
+		@media (max-width: 800px) {
+			width: 200px;
+			height: 200px;
+		}
+	}
+
+	.aboutContainer {
+		.spaceBetweenItems();
+
+		.aboutText {
+			width: 65%;
+
+			@media (max-width: 800px) {
+				width: 60%;
+			}
+		}
+
+	}
 }
 
 /* Skills */
 #skills {
 	.section();
+	
+	li {
+		list-style-type: square;
+		list-style-position: inside;
+	}
 }
 
 /* Experience */
 #experience {
 	.section();
+
+	@borderTableColor: #999;
+	
+	.experienceTable {
+		width: 80%;
+		margin: auto;
+		border: 1px solid @borderTableColor;
+
+		.titleRow {
+			background-color: #8d98b188;
+		}
+
+		.experienceRow {
+			display: flex;
+			border: 1px solid @borderTableColor;
+			.experienceColumn() {
+				padding: 2% 1%;
+			}
+
+			.years {
+				.experienceColumn();
+				width: 20%;
+			}
+
+			.company {
+				.experienceColumn();
+				width: 30%;
+			}
+
+			.position {
+				.experienceColumn();
+				width: 50%;
+			}
+		}
+	}
 }
 
 /* Contact */
 #contact {
 	.section();
+	
+	.contactIcons {
+		.centerItems();
+
+		a {
+			color: @font-color;
+			padding: 15px;
+		}
+	}
 }
 
 /* Footer */
 footer {
 	.section();
 	.centerItems();
+	margin-bottom: 4%;
 }
